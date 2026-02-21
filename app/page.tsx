@@ -77,7 +77,9 @@ export default function Home() {
       await vapiRef.current.start(
         process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID!,
         {
-          serverUrl: `${process.env.NEXT_PUBLIC_APP_URL}/api/vapi-webhook`,
+          server: {
+            url: `${process.env.NEXT_PUBLIC_APP_URL}/api/vapi-webhook`,
+          },
         }
       );
     } catch (err) {
