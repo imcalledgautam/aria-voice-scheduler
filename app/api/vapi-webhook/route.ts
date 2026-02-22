@@ -92,8 +92,6 @@ export async function POST(req: NextRequest) {
         }
 
         const endDateTime = addMinutes(startDateTime, 60);
-        // Force timezone — override whatever the AI sends
-        const userTimezone = "America/Chicago";
 
         // ── Create calendar event ─────────────────────────────────
         const result = await createCalendarEvent({
