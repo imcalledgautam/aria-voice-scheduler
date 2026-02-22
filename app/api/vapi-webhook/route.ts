@@ -99,7 +99,7 @@ export async function POST(req: NextRequest) {
             attendeeName: args.name,
             startDateTime,
             endDateTime,
-            timeZone: args.timezone || "UTC",
+            timeZone: args.timezone || "America/Chicago",
         });
 
         if (!result.success) {
